@@ -3,6 +3,7 @@
 // Seleção dos elementos do DOM
 const input = document.querySelector('input');
 const select = document.querySelector('select');
+const form = document.querySelector('form');
 const button = document.querySelector('button');
 const footer = document.querySelector('footer');
 const caption = document.querySelector('footer span');
@@ -58,10 +59,10 @@ function calculateConversion() {
 /////////////////////////////////////////////////////////////////
 
 
-button.addEventListener('click', (event) => {
+form.onsubmit = (event) => {
   event.preventDefault(); // Previne o comportamento padrão do botão
   footer.style.display = 'block'; // Exibe o resultado da conversão
-});
+};
 
 
 /////////////////////////////////////////////////////////////////
