@@ -62,6 +62,8 @@ function calculateConversion() {
 form.onsubmit = (event) => {
   event.preventDefault(); // Previne o comportamento padrão do botão
   footer.style.display = 'block'; // Exibe o resultado da conversão
+  updateCaption(); // Altera o texto da legenda conforme a moeda selecionada
+  calculateConversion(); // Calcula a conversão inicial
 };
 
 
