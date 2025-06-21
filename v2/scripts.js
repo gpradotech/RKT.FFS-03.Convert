@@ -54,6 +54,12 @@ function calculateConversion() {
   // Calcula o valor convertido
   let calc = Number(input.value) * Number(conversionRates[select.value])
   result.textContent = `R$ ${calc.toFixed(2).replace('.', ',')}`;
+
+  // Verifica se o valor é válido
+  if (isNaN(calc) || calc <= 0) {
+    footer.style.display = 'none';
+    alert('Por favor, insira um valor válido para conversão.');
+  }
 }
 
 /////////////////////////////////////////////////////////////////
